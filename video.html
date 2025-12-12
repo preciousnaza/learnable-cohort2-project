@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="nav-section">
+      <div class="nav-menu">
+          <a href="index.html"><img src="assets/Quantum-logo-white.png" alt="Logo" /></a>
+        <div class="nav-icons">
+          <i class="bi bi-list menuIcon" ></i>
+          <i class="bi bi-search searchIcon"></i>
+        </div>
+      </div>
+
+     <div class="non-user">
+       <div class="header-list">
+         <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
+        <div class="search">
+          <input type="text" placeholder="search">
+          <i class="bi bi-search searchIcon"></i>
+        </div>
+        <div class="menu-sec">
+          <i class="bi bi-list menuIcon"></i>
+          <span class="formsign-btn"><a href="#">Sign up</a></span>
+          <span class="formlog-btn"><a href="#">Login</a></span>
+        </div>
+      </div>
+     </div>
+
+      <div class="user">
+        <div class="header-list">
+         <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
+        <div class="search">
+          <input type="text" placeholder="search" />
+          <i class="bi bi-search searchIcon"></i>
+        </div>
+        <div class="menu-sec">
+          <i class="bi bi-list menuIcon"></i>
+         <a href="profile.html"> <i class="bi bi-person-circle"></i></a>
+          <span><a href="#" id="logoutBtn">Logout</a></span>
+        </div>
+      </div>
+      </div>
+      </div>
+
+  <!-- VIDEO 1 -->
+  <div id="video1" class="video-box">
+    <video width="350" controls>
+      <source src="assets/The Running Man _ Official Trailer (2025 Movie) - Edgar Wright_ Glen Powell(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 2 -->
+  <div id="video2" class="video-box">
+    <video width="350" controls>
+      <source src="assets/Captain America_ Brave New World _ Official Trailer(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 3 -->
+  <div id="video3" class="video-box">
+    <video width="350" controls>
+      <source src="assets/Predator_ Badlands _ Official Trailer(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 4 -->
+  <div id="video4" class="video-box">
+    <video width="350" controls>
+      <source src="assets/OSIRIS Official Trailer (2025)(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 5 -->
+    <div id="video5" class="video-box">
+    <video width="350" controls>
+      <source src="assets/Mickey 17 _ Official Trailer(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+    <!-- VIDEO 6 -->
+ <div id="video6" class="video-box">
+    <video width="350" controls>
+      <source src="assets/COLD STORAGE _ Official Teaser Trailer _ STUDIOCANAL(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+      <!-- VIDEO 7 -->
+ <div id="video7" class="video-box">
+    <video width="350" controls>
+      <source src="assets/Superman _ Official Trailer _ DC(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+  <script>
+    // Read ?video=video1 from the URL
+const params = new URLSearchParams(window.location.search);
+const videoID = params.get("video");
+
+// Hide all videos
+document.querySelectorAll(".video-box").forEach(box => {
+  box.style.display = "none";
+});
+
+// Show the selected one
+if (videoID) {
+  const selected = document.getElementById(videoID);
+  if (selected) {
+    selected.style.display = "block";
+  }
+}
+
+  </script>
+</body>
+</html>
