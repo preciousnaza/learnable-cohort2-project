@@ -3,6 +3,8 @@ const slides = document.querySelectorAll(".slider");
 const dots = document.querySelectorAll(".dot span");
 const userNavSec = document.querySelector(".nav-menu");
 const headerListSec= document.querySelector(".header-list");
+const head = document.querySelector('header')
+const mainM = document.querySelector('main')
 
 
 
@@ -109,6 +111,8 @@ if (searchIcon) {
     searchPage.classList.add("show-search");
       userNavSec.style.zIndex = '1';
       headerListSec.style.zIndex = '1';
+      
+      
   });
 })
 }
@@ -130,6 +134,8 @@ function showWatch(e) {
   if (listPageLarge) listPageLarge.classList.add("show-list");
   if (searchPage) searchPage.classList.remove("show-search");
   document.body.classList.add("lock-scroll");
+ 
+ 
 
   if (menuClose) menuClose.classList.remove("active");
   if (mainmenu) mainmenu.classList.remove("active");
@@ -158,6 +164,7 @@ function closeMenu() {
   document.body.classList.remove("lock-scroll");
   if (listPage) listPage.classList.remove("show-list");
   if (listPageLarge) listPageLarge.classList.remove("show-list");
+
 }
 if (hamburger && hamburger.length) {
   hamburger.forEach(function(hamb) {
@@ -167,6 +174,8 @@ if (hamburger && hamburger.length) {
       document.body.classList.add("lock-scroll");
         userNavSec.style.zIndex = '1';
       headerListSec.style.zIndex = '1';
+     
+     
     });
   });
 }
@@ -211,6 +220,8 @@ if (notification) {
   addClickTouch(notification, function () {
     if (notifyPage) notifyPage.classList.add("show-notify");
     if (mainmenu) mainmenu.classList.remove("active");
+   
+   
   });
 }
 
@@ -231,6 +242,8 @@ if (mickey && mickey.length) {
         footer.style.backgroundColor = "#000080";
         footer.style.margin = "0";
         footer.style.paddingBottom = "10px";
+       
+      
       }
     });
   });
