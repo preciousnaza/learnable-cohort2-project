@@ -71,11 +71,6 @@ const searchPlay = id("searchPlay");
 const searchMsg = className("search-msg")[0];
 const inputSearch = id("searchInput");
 const searchResult = id("searchResult");
-const listPage = id("listPage");
-const listPageLarge = id("listPageLarge");
-const listBtn = id("listBtn");
-const listCloseBtn = id("listCloseBtn");
-
 //search play button
 if (searchPlay) {
   addClickTouch(searchPlay, () => {
@@ -124,33 +119,31 @@ if (searchPage) {
   });
 }
 
-// FOR THE WATCH LIST PAGE
+// ===== WATCHLIST PAGE =====
+const listPage = id("listPage");
+const listPageLarge = id("listPageLarge");
+const listBtn = id("listBtn");
+const listCloseBtn = id("listCloseBtn");
+
 if (listBtn) {
-  addClickTouch(listBtn, showWatch);
-}
-function showWatch(e) {
-  e && e.preventDefault && e.preventDefault();
-  if (listPage) listPage.classList.add("show-list");
-  if (listPageLarge) listPageLarge.classList.add("show-list");
-  if (searchPage) searchPage.classList.remove("show-search");
-  document.body.classList.add("lock-scroll");
- 
- 
+  listBtn.addEventListener("click", showWatch)}
+    function showWatch(e) {
+    e.preventDefault();
+    listPage.classList.add("show-list");
+    listPageLarge.classList.add("show-list");
+    searchPage.classList.remove("show-search");
+    document.body.classList.add("lock-scroll");
 
-  if (menuClose) menuClose.classList.remove("active");
-  if (mainmenu) mainmenu.classList.remove("active");
-}
+    menuClose.classList.remove("active");
+    mainmenu.classList.remove("active");
+  };
 
-//search icon animation (if you still use these classes elsewhere)
-const searchBtn = document.querySelector(".ti-search");
-const searchLine = document.querySelector(".line");
-const searchInput = document.querySelector(".search-input");
-if (searchBtn) {
-  addClickTouch(searchBtn, function () {
-    if (searchLine) searchLine.classList.toggle("hidden");
-    if (searchInput) searchInput.classList.toggle("hidden");
-    searchBtn.style.animation = "search-scale 2s forwards ease";
-  });
+function closeMenu() {
+  mainmenu.classList.remove("active");
+  menuClose.classList.remove("active");
+  document.body.classList.remove("lock-scroll");
+  listPage.classList.remove("show-list");
+  listPageLarge.classList.remove("show-list");
 }
 
 //Menu Section
