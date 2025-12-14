@@ -129,14 +129,17 @@ if (listBtn) {
   listBtn.addEventListener("click", showWatch)}
     function showWatch(e) {
     e.preventDefault();
+
     listPage.classList.add("show-list");
-    listPageLarge.classList.add("show-list");
+    listPageLarge.classList.add('show-list-lg')
+        
     searchPage.classList.remove("show-search");
     document.body.classList.add("lock-scroll");
 
     menuClose.classList.remove("active");
     mainmenu.classList.remove("active");
   };
+
 
 function closeMenu() {
   mainmenu.classList.remove("active");

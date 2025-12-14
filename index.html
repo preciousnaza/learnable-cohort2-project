@@ -561,23 +561,44 @@
         </p>
       </footer>
     </section>
-    <!-- End of Watch List Page -->
+
     <!-- START of Watch List Page FOR LARGE SCREEN -->
      <section class="list-container" id="listPageLarge">
-      <header class="list-header-lg">
-        <div class="list-logo-lg">
-          <img src="assets/Quantum-logo-white.png" alt="Quantum Logo" />
+      <header class="home-hd">
+      <div class="nav-section">
+
+     <div class="non-user">
+       <div class="header-list">
+         <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
+        <div class="search">
+          <input type="text" placeholder="search">
+          <i class="bi bi-search searchIcon"></i>
         </div>
-        <form>
-          <input type="text" placeholder="Search" />
-          <i class="bi bi-search"></i>
-        </form>
-        <div class="list-nav-btns">
-          <img src="assets/hamburger.svg" alt="hamburger menu" />
-          <button class="list-sign-up">Sign Up</button>
-          <button class="list-log-in">LogIn</button>
+        <div class="menu-sec">
+          <i class="bi bi-list menuIcon"></i>
+          <span class="formsign-btn"><a href="#">Sign up</a></span>
+          <span class="formlog-btn"><a href="#">Login</a></span>
         </div>
+      </div>
+     </div>
+
+      <div class="user">
+        <div class="header-list">
+         <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
+        <div class="search">
+          <input type="text" placeholder="search" />
+          <i class="bi bi-search searchIcon"></i>
+        </div>
+        <div class="menu-sec">
+          <i class="bi bi-list menuIcon"></i>
+         <a href="profile.html"> <i class="bi bi-person-circle"></i></a>
+          <span><a href="#" id="logoutBtn">Logout</a></span>
+        </div>
+      </div>
+      </div>
+      </div>
       </header>
+
       <h2 class="list-title-lg">Watchlist</h2>
       <div class="result-lg">
         <div class="list-result-lg">
@@ -617,18 +638,17 @@
           </button>
         </div>
       </div>
-      <div class="list-footer-lg">
-        <div class="list-logo-lg">
+      <footer class="list-footer">
+        <div class="list-logo">
           <img src="assets/Quantum-logo-white.png" alt="Quantum logo" />
         </div>
         <p>
-          © 2025 Quantum + Ltd. All rights Reserved. A product of Upskill BST
+          © 2025 Quantum + Ltd. <br> All rights Reserved. A product of Upskill BST
           Team learnable Find out more at Genesys
         </p>
-      </div>
-    </section>
-    <!-- END of Watch List Page FOR LARGE SCREEN -->
+      </footer>
 
+    </section>
 
 
     <footer class="home-footer">
@@ -643,8 +663,6 @@
     </footer>
 
 
-
-    
     <script src="main.js"></script>
   </body>
 </html>
